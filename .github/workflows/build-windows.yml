@@ -35,7 +35,7 @@ jobs:
       - name: Build EXE with PyInstaller
         run: |
           # Указываем имя скрипта и встраиваем папку templates (Windows uses ';' separator)
-          pyinstaller --clean --onefile --noconsole --name auto_macro --add-data "templates;templates" auto_macro.py
+          pyinstaller --clean --onefile --name auto_macro --add-data "templates;templates" auto_macro.py
 
       - name: List dist dir
         run: dir dist
