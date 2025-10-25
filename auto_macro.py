@@ -8,7 +8,7 @@ def get_templates_dir():
         templates = base / "templates"
     else:
         # запускается как скрипт — ищем templates рядом с файлом
-        base = Path(_file_).parent
+        base = Path(__file__).parent
         templates = base / "templates"
     return templates
 
