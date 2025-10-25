@@ -1,1 +1,6 @@
-
+opencv-python
+numpy
+pillow
+pyautogui
+keyboard
+pyinstaller
