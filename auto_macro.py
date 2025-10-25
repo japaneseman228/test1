@@ -1,3 +1,19 @@
+import sys
+from pathlib import Path
+
+def get_templates_dir():
+    # Если приложение упаковано PyInstaller, ресурсы доступны в _MEIPASS
+    if getattr(sys, 'frozen', False):
+        base = Path(sys._MEIPASS)
+        templates = base / "templates"
+    else:
+        # запускается как скрипт — ищем templates рядом с файлом
+        base = Path(_file_).parent
+        templates = base / "templates"
+    return templates
+
+# потом в коде использовать:
+TEMPLATES_DIR = get_templates_dir()
 """
 auto_macro.py
 
